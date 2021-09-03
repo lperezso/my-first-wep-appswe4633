@@ -1,17 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="s3://lpswe4633/styles.css">
+    <title>My First WebApp </title>
 
+    
+
+</head>
+  
 <body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
+
+    <h2>My First WebApp</h2>
+
+    
+    
+    
+
+    <div class="container">
+        <div class="navigation-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper">
+                    <a href="s3://lpswe4633/index.html">Home</a>
+                </div>
+
+                <div class="navigation-link-wrapper">
+                    <a href="s3://lpswe4633/aboutme.html">About Me</a>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="brand">
+                    <div> Created for my SWE4633 class</div>
+                </div>
+            </div>
+        </div>
+            
+        
+
+        <div class="content-wrapper">
+                <div class="portfolio-items-wrapper">
+          
+                  <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background"></div>
+          
+                    <div class="img-text-wrapper">
+                      <div class="logo-wrapper">
+                            <img src="s3://lpswe4633/ponyo.jpg" alt="ponyo">
+                      </div>
+          
+                      <div class="subtitle">Ponyo a movie by Ghibli Studios</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-items-wrapper">
+          
+                    <div class="portfolio-item-wrapper">
+                      <div class="portfolio-img-background"></div>
+            
+                      <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                              <img src="s3://lpswe4633/ponyo1.jpg" alt="ponyo">
+                        </div>
+            
+                        <div class="subtitle">This is Ponyo again but not a fish anymore</div>
+                      </div>
+                    </div>
+                  </div>
+          
+            
+                
+
+        
+    </div>
 </body>
 
+<script>
+    const portfolioItems = document.querySelectorAll('.img-item-wrapper');
+  
+    portfolioItems.forEach(portfolioItem => {
+      portfolioItem.addEventListener('mouseover', () => {
+        console.log(portfolioItem.childNodes[1].classList)
+        portfolioItem.childNodes[1].classList.add('image-blur');
+      });
+  
+      portfolioItem.addEventListener('mouseout', () => {
+        console.log(portfolioItem.childNodes[1].classList)
+        portfolioItem.childNodes[1].classList.remove('image-blur');
+      });
+    });
+  
+  </script>
+
 </html>
+
